@@ -21,19 +21,21 @@
     </div>
     <div class="main">
         <div class="products">
-            <p>Products go here.</p>
+            <button class="btn" v-on:click="addItems">Add Items</button>
         </div>
         <div class="cart">
             <h2>Shopping Cart</h2>
             <div>
-                No items in the cart.
+                <p>Uh oh, your cart is empty...feel free to add stuff :)</p>
+                <div>Total Items: {{ totalItems }}</div>
             </div>
-        </div>
+        </div> 
     </div>
 </div>
 
 <!-- Scripts -->
-<script src="/reload/reload.js"></script>
+<script src="/reload/reload.js"></script> <!-- being used because this isn't being run with webpack -->
+<script src="node_modules/vue/dist/vue.js"></script>
 <script type="text/javascript" src="public/script.js"></script>
 
 </body>

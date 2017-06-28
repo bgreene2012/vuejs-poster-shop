@@ -9,9 +9,8 @@ button:focus, input:focus {
 }
 
 .btn {
-    background-color: #F08080;
+    background-color: lightblue;
     border-radius: 2px;
-    color: white;
     user-select: none;
     border: none;
     cursor: pointer;
