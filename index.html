@@ -29,8 +29,12 @@
         <div class="cart">
             <h2>Shopping Cart</h2>
             <div>
-                <p>Uh oh, your cart is empty...feel free to add stuff :)</p>
                 <div>Total Items: {{ totalItems }}</div>
+                <ul>
+                    <li class="cart-item" v-for="item in cart">
+                        <div class="item-title">{{ item.title }}</div>
+                    </li>
+                </ul>
             </div>
         </div> 
     </div>
