@@ -26,17 +26,19 @@ new Vue({
             }
         },
         onSubmit: function() {
-            this.items = [];
-            this.loading = true;
-            this.$http
-                .get('/search/'.concat(this.newSearch))
-                .then(function(res) {
-                    this.lastSearch = this.newSearch;
-                    this.results = res.body;
-                    this.loading = false;
-                    this.appendItems();
-                })
-            ;
+            if (this.newSearch.length) {
+                this.items = [];
+                this.loading = true;
+                this.$http
+                    .get('/search/'.concat(this.newSearch))
+                    .then(function(res) {
+                        this.lastSearch = this.newSearch;
+                        this.results = res.body;
+                        this.loading = false;
+                        this.appendItems();
+                    })
+                ;
+            }
         },
         addItem: function(ndx){
             this.total += PRICE;
